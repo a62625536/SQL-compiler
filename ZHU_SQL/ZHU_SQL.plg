@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ZHU_SQL - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\zhu\AppData\Local\Temp\RSP42AD.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/ZHU_SQL.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\zhu\Desktop\ZHU_SQL\myparser.c"
+"C:\Users\zhu\Desktop\ZHU_SQL\mylexer.c"
+]
+Creating command line "cl.exe @C:\Users\zhu\AppData\Local\Temp\RSP42AD.tmp" 
+Creating temporary file "C:\Users\zhu\AppData\Local\Temp\RSP42AE.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib yl.lib /nologo /subsystem:console /incremental:no /pdb:"Release/ZHU_SQL.pdb" /machine:I386 /out:"Release/ZHU_SQL.exe" 
+.\Release\myparser.obj
+.\Release\mylexer.obj
+]
+Creating command line "link.exe @C:\Users\zhu\AppData\Local\Temp\RSP42AE.tmp"
+<h3>Output Window</h3>
+Compiling...
+myparser.c
+mylexer.c
+Linking...
+
+
+
+<h3>Results</h3>
+ZHU_SQL.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

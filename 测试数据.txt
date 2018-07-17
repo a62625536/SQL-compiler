@@ -1,0 +1,63 @@
+CREATE DATABASE zhu1;
+CREATE DATABASE zhu2;
+SHOW DATABASES;
+CREATE DATABASE zhu2;
+DROP DATABASE zhu2;
+SHOW DATABASES;
+
+USE DATABASE zhu1;
+CREATE TABLE class(cno INT,sno INT);
+CREATE TABLE stu(sname CHAR(20),sno INT,age INT);
+CREATE TABLE cs(sno INT,cname CHAR(20),grade INT);
+CREATE TABLE xxx(aaa int);
+CREATE TABLE class(aa INT);
+CREATE TABLE xx(name int,name char(10));
+SHOW TABLES;
+DROP TABLE xxx;
+DROP TABLE yyy;
+SHOW TABLES;
+
+INSERT INTO class(1,1503001);
+INSERT INTO class(1,1503002);
+INSERT INTO class(2,1503003);
+INSERT INTO class(2,1503004);
+INSERT INTO stu('name1',1503001,15);
+INSERT INTO stu('name2',1503002,16);
+INSERT INTO stu('name3',1503003,17);
+INSERT INTO stu('name4',1503004,18);
+INSERT INTO cs(1503001,'math',99);
+INSERT INTO cs(1503001,'cs',88);
+INSERT INTO cs(1503001,'che',77);
+INSERT INTO cs(1503002,'math',78);
+INSERT INTO cs(1503003,'cs',50);
+INSERT INTO xxx(1,1);
+INSERT INTO stu(11,101,11);
+INSERT INTO stu('name1',101,11,12);
+
+SELECT * FROM class;
+SELECT * FROM stu;
+SELECT * FROM cs;
+SELECT * FROM cs WHERE cs.sno = 1503001;
+SELECT stu.sno FROM class,stu WHERE class.cno = 1 and class.sno = stu.sno ;	
+SELECT * FROM stu WHERE age > 16 and age != 20;
+SELECT * FROM stu WHERE sno = 1503004 or age > 10 and age < 15;
+SELECT class.cno,stu.sno,stu.sname,stu.age,cs.cname,cs.grade FROM class,stu,cs WHERE class.sno = stu.sno and stu.sno = cs.sno;
+
+SELECT xx FROM stu;
+SELECT sno FROM stu,cs;	
+SELECT aa.sno FROM stu;
+SELECT * FROM stu WHERE aa.sno > 1;
+SELECT * FROM stu WHERE sname = 1;
+
+SELECT * FROM stu;
+UPDATE stu SET age = 20 WHERE sname = 'name1';
+UPDATE stu SET sno = 11111,age = 22 WHERE sname = 'name2';
+SELECT * FROM stu;
+UPDATE stu SET age = '10' WHERE sname = 'name1';
+UPDATE stu SET xx = 10 WHERE sname = 'name1';
+
+SELECT * FROM stu;
+DELETE FROM stu WHERE age < 20;
+SELECT * FROM stu;
+EXIT;
+
